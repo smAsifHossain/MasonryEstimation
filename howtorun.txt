@@ -1,0 +1,2 @@
+cd D:\Software\MasonryEstimation\MasonryEstimation
+dotnet run

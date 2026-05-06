@@ -1,0 +1,13 @@
+.vs/
+**/bin/
+**/obj/
+**/*.user
+**/*.db
+**/*.db-journal
+**/*.db-wal
+**/*.db-shm
+**/App_Data/
+server.out.log
+server.err.log
+.git/
+.gitignore

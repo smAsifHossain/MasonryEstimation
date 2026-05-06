@@ -1,0 +1,40 @@
+@model MasonryEstimation.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Sign in";
+}
+
+<section class="auth-page">
+    <div class="auth-panel">
+        <div class="auth-heading">
+            <span class="auth-kicker">Welcome back</span>
+            <h1>Sign in</h1>
+            <p>Access your masonry estimates and material summaries.</p>
+        </div>
+
+        <form asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" class="auth-form">
+            <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" autocomplete="email" />
+            <span asp-validation-for="Email"></span>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password" autocomplete="current-password" />
+            <span asp-validation-for="Password"></span>
+
+            <label class="checkbox-line">
+                <input asp-for="RememberMe" />
+                <span>Remember me</span>
+            </label>
+
+            <button type="submit" class="btn-app">Sign in</button>
+        </form>
+
+        <p class="auth-switch">New to Masonry Estimator? <a asp-action="Register">Create an account</a></p>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
