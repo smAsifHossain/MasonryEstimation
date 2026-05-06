@@ -4,6 +4,29 @@ Masonry Estimator is a full-stack web application for creating masonry project b
 
 **Live Demo:** [https://masonryestimation.onrender.com](https://masonryestimation.onrender.com)
 
+## Repository Structure
+
+```text
+MasonryEstimation/
+├── MasonryEstimation/
+│   ├── Controllers/
+│   ├── Data/
+│   ├── Models/
+│   ├── Services/
+│   ├── Views/
+│   ├── wwwroot/
+│   │   ├── css/
+│   │   └── js/
+│   ├── Program.cs
+│   └── MasonryEstimation.csproj
+├── Dockerfile
+├── render.yaml
+├── .dockerignore
+├── .gitignore
+└── README.md
+```
+
+
 ## Screenshots
 
 ### Homepage
@@ -106,28 +129,6 @@ The application uses SQLite with Entity Framework Core. SQLite keeps the project
 Local database files are ignored by Git through `.gitignore`, so development data is not committed to the repository.
 
 For the hosted Render demo, SQLite should be treated as temporary demo storage. Free hosting environments can restart or redeploy the app, which may reset local file-based data. For production use, the app could be moved to PostgreSQL, SQL Server, or another managed database.
-
-## Repository Structure
-
-```text
-MasonryEstimation/
-├── MasonryEstimation/
-│   ├── Controllers/
-│   ├── Data/
-│   ├── Models/
-│   ├── Services/
-│   ├── Views/
-│   ├── wwwroot/
-│   │   ├── css/
-│   │   └── js/
-│   ├── Program.cs
-│   └── MasonryEstimation.csproj
-├── Dockerfile
-├── render.yaml
-├── .dockerignore
-├── .gitignore
-└── README.md
-```
 
 ## Developer
 
