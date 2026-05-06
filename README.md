@@ -107,53 +107,6 @@ Local database files are ignored by Git through `.gitignore`, so development dat
 
 For the hosted Render demo, SQLite should be treated as temporary demo storage. Free hosting environments can restart or redeploy the app, which may reset local file-based data. For production use, the app could be moved to PostgreSQL, SQL Server, or another managed database.
 
-## Run Locally
-
-Requirements:
-
-- .NET 8 SDK
-- Git
-
-Run the application:
-
-```powershell
-cd D:\Software\MasonryEstimation\MasonryEstimation
-dotnet run
-```
-
-Then open the local URL printed by ASP.NET, usually:
-
-```text
-http://localhost:5051
-```
-
-## Deploy From GitHub
-
-This project includes a `Dockerfile`, `.dockerignore`, `.gitignore`, and `render.yaml` for deployment.
-
-Push the project to GitHub:
-
-```powershell
-cd D:\Software\MasonryEstimation
-git init
-git add .
-git commit -m "Initial Masonry Estimator app"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/MasonryEstimation.git
-git push -u origin main
-```
-
-Deploy on Render:
-
-1. Create a new Render Web Service.
-2. Connect the GitHub repository.
-3. Select Docker as the runtime.
-4. Keep the root directory empty because the `Dockerfile` is in the repository root.
-5. Select the free instance type.
-6. Deploy the service.
-
-GitHub Pages is not suitable for this project because the app requires an ASP.NET Core backend.
-
 ## Repository Structure
 
 ```text
